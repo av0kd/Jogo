@@ -1,22 +1,28 @@
 goGameBtn = false;
 
 function showMenu(){
-    background("rgb(197, 174, 42)");
+    background("#16303c");
     fill("blue");
     btnOverlap();
-    rect(175,175,50);
+    rect(215,131,50);
+}
+
+function setupMenu(){
+    
 }
 
 function mouseClicked(){
     if(tela === 0 && goGameBtn){
         tela = 1;
+        setup();
+        
     }
 }
 
 function btnOverlap(){
-    if(mouseX > 175 && mouseX < 225){
-        //gameBtn
-        goGameBtn = (mouseY > 175 && mouseY < 225);        
+    if(tela === 0 && mouseX > 215 && mouseX < 265){
+        goGameBtn = (mouseY > 131 && mouseY < 181);
+                
     }
 }
     
